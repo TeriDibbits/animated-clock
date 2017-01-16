@@ -3,6 +3,7 @@ html {
 }
 
 .clock-face {
+  position: relative;
   height: 300px;
   margin: 50px auto;
   width: 300px;
@@ -11,17 +12,32 @@ html {
 }
 
 .center {
+  position: absolute;
+  left: 45%;
+  top: 140px;
   width: 28px;
 }
 
 .hand {
+  position: absolute;
+  left: 47.5%;
+  top: 70px;
   width: 14px;
+
 }
 
 .hand-hour {
-
+  transform-origin: bottom;
+  animation: spin 4s infinite;
+  top: 100px;
 }
 
 .hand-minute {
+  transform-origin: bottom;
+  animation: spin 800ms infinite;
+}
 
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
 }
